@@ -16,16 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        home: Container(
-          child: Row(
-            children: [
-              Text(
-                "SHRU258",
-                style: TextStyle(),
-              ),
-            ],
-          ),
-        ));
+        home: Scaffold(
+            backgroundColor: Colors.white,
+            body: Center(
+                child: Text(
+              'SHRU258',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+            ))));
   }
 }
