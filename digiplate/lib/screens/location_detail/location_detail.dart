@@ -6,11 +6,12 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color(0xffFFFFFF),
         body: Center(
           child: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.only(top: 20)),
-              Image.asset('assets/images/learners_pregnant.jpg'),
+              Image.asset('assets/images/disabled.jpg'),
               Padding(padding: EdgeInsets.only(top: 20)),
               Text(' '),
               Text(
