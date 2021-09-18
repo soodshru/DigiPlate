@@ -4,13 +4,43 @@ import 'image_banner.dart';
 class LocationDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color(0xffFFFFFF),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              Padding(padding: EdgeInsets.only(top: 20)),
+              Image.asset('assets/images/baby.jpg'),
+              Padding(padding: EdgeInsets.only(top: 20)),
+              Text(' '),
+              Text(
+                'HTN 2021',
+                style: TextStyle(
+                    fontSize: 150,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              Padding(padding: EdgeInsets.only(top: 5)),
+              Text(' '),
+              Text(
+                'ONTARIO',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+  /*backgroundColor: const Color(0xffFFFFFF),
         body: Center(
             child: Text(
           'HTN 2021',
           style: TextStyle(
               fontSize: 150, fontWeight: FontWeight.bold, color: Colors.black),
-        )));
-  }
+        )));*/
+  /*}*/
 }
