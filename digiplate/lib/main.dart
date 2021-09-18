@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
             body: Center(
                 child: Text(
               'SHRU258',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+              style: TextStyle(
+                  fontSize: 150,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
             ))));
   }
 }
