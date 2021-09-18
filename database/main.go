@@ -12,17 +12,17 @@ import (
 )
 
 func insertRows(ctx context.Context, tx pgx.Tx, accts [3]uuid.UUID) error {
-	// Insert four rows into the "accounts" table.
+	// Insert three rows into the "info" table.
 	log.Println("Creating new rows...")
 	if _, err := tx.Exec(ctx,
-		"INSERT INTO accounts (id, driverPlate1, insuranceNo1, driverPlate2, insuranceNo2, locationX, locationY) VALUES ($1, $2, $3, $4, $5, $6, $7), ($8, $9, $10, $11, $12, $13, $14), ($15, $16, $17, $18, $19, $20, $21)", accts[0], "HTN 2021", 250, "UTM 1969", 300, -89, -50, accts[1], "HTV 1234", 100, "UOT 1123", 400, 112, -69, accts[2], "UTH 7890", 150, "UWO 8888", 200, 90, 180); err != nil {
+		"INSERT INTO info (id, driverPlate1, insuranceNo1, driverPlate2, insuranceNo2, locationX, locationY) VALUES ($1, $2, $3, $4, $5, $6, $7), ($8, $9, $10, $11, $12, $13, $14), ($15, $16, $17, $18, $19, $20, $21)", accts[0], "HTN 2021", 250, "UTM 1969", 300, -89, -50, accts[1], "HTV 1234", 100, "UOT 1123", 400, 112, -69, accts[2], "UTH 7890", 150, "UWO 8888", 200, 90, 180); err != nil {
 		return err
 	}
 	return nil
 }
 
 func printBalances(conn *pgx.Conn) error {
-	rows, err := conn.Query(context.Background(), "SELECT * FROM accounts")
+	rows, err := conn.Query(context.Background(), "SELECT * FROM info")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -44,10 +44,10 @@ func printBalances(conn *pgx.Conn) error {
 }
 
 func deleteRows(ctx context.Context, tx pgx.Tx, one uuid.UUID, two uuid.UUID) error {
-	// Delete two rows into the "accounts" table.
+	// Delete two rows into the "info" table.
 	log.Printf("Deleting rows with IDs %s and %s...", one, two)
 	if _, err := tx.Exec(ctx,
-		"DELETE FROM accounts WHERE id IN ($1, $2)", one, two); err != nil {
+		"DELETE FROM info WHERE id IN ($1, $2)", one, two); err != nil {
 		return err
 	}
 	return nil
@@ -60,9 +60,9 @@ func main() {
 	scanner.Scan()
 	connstring := os.ExpandEnv(scanner.Text())
 
-	// Connect to the "bank" database
+	// Connect to the "crash" database
 	config, err := pgx.ParseConfig(connstring)
-	config.Database = "bank"
+	config.Database = "crash"
 	if err != nil {
 		log.Fatal("error configuring the database: ", err)
 	}

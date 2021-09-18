@@ -1,12 +1,12 @@
 SET sql_safe_updates = FALSE;
 
 USE defaultdb;
-DROP DATABASE IF EXISTS bank CASCADE;
-CREATE DATABASE IF NOT EXISTS bank;
+DROP DATABASE IF EXISTS crash CASCADE;
+CREATE DATABASE IF NOT EXISTS crash;
 
-USE bank;
+USE crash;
 
-CREATE TABLE accounts (
+CREATE TABLE info (
     id UUID PRIMARY KEY,
     driverPlate1 VARCHAR,
     insuranceNo1 INT8,
