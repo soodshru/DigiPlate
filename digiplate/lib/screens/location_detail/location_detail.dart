@@ -6,7 +6,7 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffE07715),
         body: Center(
           child: Column(
             children: <Widget>[
