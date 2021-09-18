@@ -72,13 +72,4 @@ const useStyles = makeStyles({
     }
   });
 
-function generateSegmentStops(num) {
-    const stops = [];
-
-    for (let i=0; i<=num; i++) {
-        stops.push(i*200/num);
-    }
-    return stops;
-}
-
 export default Achievement;
