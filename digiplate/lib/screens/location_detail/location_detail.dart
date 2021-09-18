@@ -10,7 +10,7 @@ class LocationDetail extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.only(top: 20)),
-              Image.asset('assets/images/baby.jpg'),
+              Image.asset('assets/images/learners_pregnant.jpg'),
               Padding(padding: EdgeInsets.only(top: 20)),
               Text(' '),
               Text(
@@ -20,14 +20,11 @@ class LocationDetail extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Padding(padding: EdgeInsets.only(top: 5)),
+              Padding(padding: EdgeInsets.only(top: 0)),
               Text(' '),
               Text(
                 'ONTARIO',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                style: TextStyle(fontSize: 45, color: Colors.black),
               )
             ],
           ),
