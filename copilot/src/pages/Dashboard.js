@@ -8,6 +8,7 @@ import Speedometer from "../components/Speedometer";
 import Treemap from "../components/Treemap";
 
 function Dashboard() {
+
   return (
     <Box style={{position: 'fixed', backgroundColor: "#ebeff2", height: "100%", width: "100%", top:0, left:0, overflowY: 'scroll' }}>
       <Header />
@@ -19,9 +20,7 @@ function Dashboard() {
         <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: '3rem', marginBottom: '3rem' }}>
         <Treemap/>
         <Achievement/>
-        </Box>
-        
-        
+        </Box> 
       </Container>
     </Box>
   );

@@ -8,6 +8,8 @@ import {
   Route,
 } from "react-router-dom";
 import Report from './pages/Report';
+import AreYouOkay from './pages/AreYouOkay';
+import SetIcons from './pages/SetIcons';
 
 const theme = createTheme({
   components: {
@@ -37,6 +39,9 @@ function App() {
         <Switch>
           <Route path='/report'>
             <Report/>
+          </Route>
+          <Route path='/areyouokay'>
+            <AreYouOkay />
           </Route>
           <Route path='/'>
             <Dashboard />
