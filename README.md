@@ -11,6 +11,10 @@ A revolutionary idea that digitizes number plates for the prevention of vehicle 
 ## Introduction
 Road accidents are one of the biggest causes of death in the world today. The WHO estimates that approximately 1.3 million people die each year as a result of traffic accidents. Furthermore, injuries leading to vehicle crashes are the leading cause of death for children and young adults aged 5-29 years. Such accidents also cost countries 3% of their GDP annually. DigiPlate was conceived as a response to these challenges and also motivated by the recent loss of close friends to unfortunate road accidents. We aim to transform the industry by accelerating the pace of digitalisation whilst leveraging the latest technologies to provide a trusted, secure experience.
 
+We made a video about our product. Check it out here!: https://youtu.be/LZTnflFQaQE
+
+Coda doc used for collaboration : https://coda.io/@shruti-sood/hack-the-north
+
 ## Technologies
 This project consists of a Copilot web app written in React that interfaces with an Ethereum smart contract written in Solidity and with Cockroach DB through a Go API. We also have a Flutter app that simulates a digital license plate.
 
